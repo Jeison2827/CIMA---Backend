@@ -1,0 +1,93 @@
+{
+  "C:\\Users\\jpnor\\Documents\\CIMA\\CRM-BACKEND-CIMA": {
+    "versionSfCore": null,
+    "versionFramework": "4.3.2",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>"
+    },
+    "composeServiceName": null,
+    "servicePath": "C:\\Users\\jpnor\\Documents\\CIMA\\CRM-BACKEND-CIMA",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "serverless-aws-nodejs",
+      "useDotenv": true,
+      "plugins": [
+        "serverless-offline",
+        "serverless-dotenv-plugin"
+      ],
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "stage": "developer",
+        "region": "us-east-1",
+        "versionFunctions": true,
+        "environment": {
+          "DB_HOST": "vet-world.cdxw0neqxxgc.us-east-1.rds.amazonaws.com",
+          "DB_NAME": "vet-world",
+          "DB_USER": "admin",
+          "DB_PASS": "Cvpva..2022"
+        }
+      },
+      "functions": {
+        "app": {
+          "handler": "src/index.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/",
+                "method": "ANY"
+              }
+            },
+            {
+              "http": {
+                "path": "/{proxy+}",
+                "method": "ANY"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "serviceRawFile": "#Serverless framework yml \r\n\r\nservice: serverless-aws-nodejs\r\n\r\nuseDotenv: true\r\nplugins:\r\n  - serverless-offline\r\n  - serverless-dotenv-plugin\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs18.x\r\n  stage: developer\r\n  region: us-east-1\r\n\r\nfunctions:\r\n    app:\r\n      handler: src/index.handler\r\n      events:\r\n        - http:\r\n            path: /\r\n            method: ANY\r\n        - http:\r\n            path: /{proxy+}\r\n            method: ANY\r\n\r\n",
+    "command": [
+      "start"
+    ],
+    "options": {},
+    "error": {
+      "message": "Serverless command \"start\" not found. Run \"serverless help\" for a list of all available commands.",
+      "code": "UNRECOGNIZED_CLI_COMMAND"
+    },
+    "params": {},
+    "machineId": "0a5af7e61a15f982a0a7d86c4a024c04",
+    "stage": "developer",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "85dd211f-9dc9-4dc6-a3b7-e4df29b01591",
+    "orgName": "jpnorena",
+    "userId": "VSQJFVb0zzGjkjjh0v",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "jpnorena",
+    "subscription": null,
+    "userEmail": "mcna1013@gmail.com",
+    "projectType": "traditional",
+    "versionSf": "4.3.2",
+    "serviceProviderAwsCfStackName": "serverless-aws-nodejs-developer",
+    "serviceUniqueId": null,
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
